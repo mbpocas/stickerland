@@ -25,6 +25,7 @@
  .leftMenu {
    float: left;
    display: inline-block;
+   padding-top: 25px;
  }
 
  .leftMenu ul {
@@ -51,6 +52,7 @@
    float: right;
    display: inline-block;
    color: black;
+   padding-top: 25px;
  }
 
  .rightMenu ul {
@@ -128,10 +130,13 @@ width: 40vw;
  .button1 {
    margin-top: 25px !important;
    display: inline-block;
+   text-align: center;
+   text-decoration: none;
    padding: 12px 20px;
-   background: #000;
-   color: #fff;
-   cursor: pointer;
+   color: white;
+   background-color: #62122f;
+   width: 250px;
+   border-radius: 12px;
  }
 
  .button1:hover {

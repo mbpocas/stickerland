@@ -1,33 +1,34 @@
    <div id="header">
+         <%= link_to root_path do %>
       <div class="logo"> <%= image_tag "Logo.png" %> </div>
+         <% end %>
       <div class="leftMenu">
         <ul>
           <li>
-            <a href="Browse" class="dropdown">Pesquisar</a>
+            <%= link_to "Pesquisar", products_path, class: "dropdown" %>
           </li>
           <li>
-            <a href="Categorias">Categorias</a>
+            <%= link_to "Categorias", products_path, class: "categorias" %>
           </li>
           <li>
-            <a href="Add_Sticker">Adicionar Sticker</a>
+            <%= link_to "Adicionar Sticker", products_path, class: "add-sticker" %>
           </li>
         </ul>
-      </div>
+   </div>
       <div class="rightMenu">
         <ul>
           <li>
-            <a href="User">UserName</a>
+            <%= link_to "User", products_path, class: "user" %>
           </li>
-
         </ul>
       </div>
     </div>
 
- <div id="largeImage" class="d-flex justify-content-between align-items-center">
+    <div id="largeImage" class="d-flex justify-content-between align-items-center">
       <div class="description-box">
         <h4> StickerLand</h4>
         <h1> Troque suas figurinhas com outros colecionadores agora!</h1>
-        <div class="button1"> TROCAR</div>
+            <%= link_to "STICKERS!", products_path, class: "button1" %>
       </div>
       <div class="big">
         <%= image_tag "img_homepage.png", alt: "stickers" %>
@@ -39,7 +40,9 @@
       <h2>Figurinhas</h2>
       <div class="grid">
         <div class="grid-product">
-        <%= image_tag "neymar.webp", alt: "stickers" %>
+           <%= link_to products_path do %>
+            <%= image_tag "neymar.webp", alt: "stickers" %>
+          <% end %>
           <div class="grid-detail">
             <p></p>
             <p></p>
@@ -47,7 +50,9 @@
         </div>
 
         <div class="grid-product">
-        <%= image_tag "neymar.webp", alt: "stickers" %>
+          <%= link_to products_path do %>
+            <%= image_tag "neymar.webp", alt: "stickers" %>
+          <% end %>
           <div class="grid-detail">
             <p></p>
             <p></p>
@@ -55,7 +60,9 @@
         </div>
 
         <div class="grid-product">
-        <%= image_tag "neymar.webp", alt: "stickers" %>
+          <%= link_to products_path do %>
+            <%= image_tag "neymar.webp", alt: "stickers" %>
+          <% end %>
           <div class="grid-detail">
             <p></p>
             <p></p>
