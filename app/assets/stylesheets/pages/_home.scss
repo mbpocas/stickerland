@@ -1,1 +1,182 @@
 // Specific CSS for your home-page
+#header {
+   background: #62122F;
+   color: white;
+   overflow: auto;
+   padding-left: 25px;
+   padding-right: 25px;
+ }
+
+ #header a {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   text-decoration: none;
+ }
+
+ #header a:hover {
+   color: red;
+ }
+ .logo {
+   float: left;
+   display: inline-block;
+   background: red;
+   padding: 20px;
+   margin-right: 25px;
+ }
+
+ .leftMenu {
+   float: left;
+   display: inline-block;
+ }
+
+ .leftMenu ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+ }
+
+ .leftMenu ul li {
+   display: inline-block;
+   padding: 20px;
+ }
+
+ .leftMenu ul li a {
+   color: white;
+ }
+
+ .leftMenu ul li a.dropdown {
+   color: white;
+ }
+
+ .rightMenu {
+   float: right;
+   display: inline-block;
+   color: black;
+ }
+
+ .rightMenu ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+ }
+
+ .rightMenu ul li {
+   display: inline-block;
+   padding: 20px;
+ }
+
+ .rightMenu ul li a {
+   color: white;
+ }
+
+//  box
+
+.big img {
+width: 40vw;
+}
+
+ #largeImage {
+   padding: 70px 25px;
+   background: -webkit-linear-gradient(
+       45deg,
+       rgba(231, 31, 17, 0.7) 0%,
+       #000000 100%
+     ),
+     url(http://cdn.collider.com/wp-content/uploads/Bane-Batman-standoff-The-Dark-Knight-Rises-wall-poster1.jpg)
+       no-repeat left center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+
+ .description-box {
+   width: 50%;
+ }
+
+ .description-box h1 {
+   font-family: serif;
+   font-weight: 700;
+   font-size: 60px;
+   margin: 0;
+   color: white;
+ }
+
+ .description-box h3 {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-weight: 4;
+   font-size: 25px;
+   margin: 0;
+   color: white;
+ }
+
+ .description-box h4 {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-weight: 300;
+   margin: 0px;
+   color: white;
+ }
+
+ .description-box p {
+   margin-top: 25px !important;
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-weight: 100;
+   font-size: 18px;
+   margin: 0px;
+   color: white;
+ }
+
+ .button1 {
+   margin-top: 25px !important;
+   display: inline-block;
+   padding: 12px 20px;
+   background: #000;
+   color: #fff;
+   cursor: pointer;
+ }
+
+ .button1:hover {
+   background: rgba(0, 0, 0, 0.6);
+ }
+
+ .fig_pic {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  cursor: pointer;
+}
+.fig_pic h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+.container {
+  width: 1070px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 100px;
+}
+.grid-product:hover {
+  background: #e1e1e1;
+}
+.grid-product img {
+  width: 300px;
+}
+.grid-detail {
+  margin: 20px 0;
+  text-align: center;
+}
+.grid-detail p:last-child {
+  transition: .5s;
+  margin-top: 10px;
+}
+.grid-product:hover > .grid-detail p:last-child {
+  color: #3498db;
+}
