@@ -126,7 +126,7 @@ Product.create!(
   title: 'Fabinho',
   sticker: 'BRA12',
   url: '',
-  user_id: 2
+  user_id: 1
 )
 
 Product.create!(
@@ -134,7 +134,7 @@ Product.create!(
   title: 'Fred',
   sticker: 'BRA13',
   url: '',
-  user_id: 2
+  user_id: 1
 )
 
 Product.create!(
@@ -142,7 +142,7 @@ Product.create!(
   title: 'Lucas Paquetá',
   sticker: 'BRA14',
   url: '',
-  user_id: 2
+  user_id: 1
 )
 
 Product.create!(
@@ -150,7 +150,7 @@ Product.create!(
   title: 'Antony',
   sticker: 'BRA15',
   url: '',
-  user_id: 2
+  user_id: 1
 )
 
 Product.create!(
@@ -158,7 +158,7 @@ Product.create!(
   title: 'Gabriel Jesus',
   sticker: 'BRA16',
   url: '',
-  user_id: 2
+  user_id: 1
 )
 
 Product.create!(
@@ -166,7 +166,7 @@ Product.create!(
   title: 'Neymar Jr',
   sticker: 'BRA17',
   url: '',
-  user_id: 2
+  user_id: 1
 )
 
 Product.create!(
@@ -174,7 +174,7 @@ Product.create!(
   title: 'Raphinha',
   sticker: 'BRA18',
   url: '',
-  user_id: 2
+  user_id: 1
 )
 
 Product.create!(
@@ -182,7 +182,7 @@ Product.create!(
   title: 'Richarlison',
   sticker: 'BRA19',
   url: '',
-  user_id: 2
+  user_id: 1
 )
 
 Product.create!(
@@ -190,7 +190,7 @@ Product.create!(
   title: 'Vinícius Jr',
   sticker: 'BRA20',
   url: '',
-  user_id: 2
+  user_id: 1
 )
 
 Product.create!(
@@ -198,7 +198,7 @@ Product.create!(
   title: 'Cristiano Ronaldo',
   sticker: 'POR18',
   url: '',
-  user_id: 2
+  user_id: 1
 )
 
 Product.create!(
@@ -206,7 +206,7 @@ Product.create!(
   title: 'Lionel Messi',
   sticker: 'ARG20',
   url: '',
-  user_id: 2
+  user_id: 1
 )
 
 Product.create!(
@@ -214,7 +214,7 @@ Product.create!(
   title: 'Robert Lewandowski',
   sticker: 'POL17',
   url: '',
-  user_id: 2
+  user_id: 1
 )
 
 Product.create!(
@@ -222,7 +222,7 @@ Product.create!(
   title: 'Team Logo',
   sticker: 'FRA2',
   url: '',
-  user_id: 2
+  user_id: 1
 )
 
 Product.create!(
@@ -230,7 +230,7 @@ Product.create!(
   title: 'Kylian Mbappé',
   sticker: 'FRA19',
   url: '',
-  user_id: 2
+  user_id: 1
 )
 
 Product.create!(
