@@ -5,3 +5,255 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Product.destroy_all
+puts 'Creating stickers...'
+Product.create!(
+  category: 'Fifa',
+  title: 'Official Trophy',
+  sticker: 'FWC2',
+  url: '',
+  user_id: 1
+)
+
+Product.create!(
+  category: 'Fifa',
+  title: 'Official Emblem',
+  sticker: 'FWC6',
+  url: '',
+  user_id: 1
+)
+
+Product.create!(
+  category: 'Stadiums',
+  title: 'Lusail Stadium outdoor',
+  sticker: 'FWC16',
+  url: '',
+  user_id: 1
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Team Shot',
+  sticker: 'BRA1',
+  url: '',
+  user_id: 1
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Team Logo',
+  sticker: 'BRA2',
+  url: '',
+  user_id: 1
+)
+
+
+Product.create!(
+  category: 'Teams',
+  title: 'Alisson',
+  sticker: 'BRA3',
+  url: '',
+  user_id: 1
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Ederson',
+  sticker: 'BRA4',
+  url: '',
+  user_id: 1
+)
+
+
+Product.create!(
+  category: 'Teams',
+  title: 'Alex Sandro',
+  sticker: 'BRA5',
+  url: '',
+  user_id: 1
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Danilo',
+  sticker: 'BRA6',
+  url: '',
+  user_id: 1
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Eder Militão',
+  sticker: 'BRA7',
+  url: '',
+  user_id: 1
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Marquinhos',
+  sticker: 'BRA8',
+  url: '',
+  user_id: 1
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Thiago Silva',
+  sticker: 'BRA9',
+  url: '',
+  user_id: 1
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Casemiro',
+  sticker: 'BRA10',
+  url: '',
+  user_id: 1
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Philippe Coutinho',
+  sticker: 'BRA11',
+  url: '',
+  user_id: 1
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Fabinho',
+  sticker: 'BRA12',
+  url: '',
+  user_id: 2
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Fred',
+  sticker: 'BRA13',
+  url: '',
+  user_id: 2
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Lucas Paquetá',
+  sticker: 'BRA14',
+  url: '',
+  user_id: 2
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Antony',
+  sticker: 'BRA15',
+  url: '',
+  user_id: 2
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Gabriel Jesus',
+  sticker: 'BRA16',
+  url: '',
+  user_id: 2
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Neymar Jr',
+  sticker: 'BRA17',
+  url: '',
+  user_id: 2
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Raphinha',
+  sticker: 'BRA18',
+  url: '',
+  user_id: 2
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Richarlison',
+  sticker: 'BRA19',
+  url: '',
+  user_id: 2
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Vinícius Jr',
+  sticker: 'BRA20',
+  url: '',
+  user_id: 2
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Cristiano Ronaldo',
+  sticker: 'POR18',
+  url: '',
+  user_id: 2
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Lionel Messi',
+  sticker: 'ARG20',
+  url: '',
+  user_id: 2
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Robert Lewandowski',
+  sticker: 'POL17',
+  url: '',
+  user_id: 2
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Team Logo',
+  sticker: 'FRA2',
+  url: '',
+  user_id: 2
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Kylian Mbappé',
+  sticker: 'FRA19',
+  url: '',
+  user_id: 2
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Karim Benzema',
+  sticker: 'FRA16',
+  url: '',
+  user_id: 1
+)
+
+Product.create!(
+  category: 'Fifa',
+  title: 'Al Rihla',
+  sticker: 'FWC18',
+  url: '',
+  user_id: 1
+)
+
+Product.create!(
+  category: 'Teams',
+  title: 'Team Logo',
+  sticker: 'NED2',
+  url: '',
+  user_id: 1
+)
+puts 'Finished!'
