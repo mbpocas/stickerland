@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <%= simple_form_for(@product) do |f| %>
+        <%= f.input :category, collection: Product::CATEGORIES %>
+        <%= f.input :title, placeholder: "Trofeu"%>
+        <%= f.input :sticker, placeholder: "FWC2" %>
+        <%= f.submit class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
