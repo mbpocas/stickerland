@@ -5,8 +5,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-
   resources :products do
-    resources :orders
+    collection do
+      get "my_stickers", to: "products#my_stickers"
+    end
+    resources :orders, only: %i[new create]
   end
+  resources :orders, only: :show
 end

@@ -9,10 +9,10 @@
         <%= link_to "Pesquisar", products_path, class: "dropdown" %>
       </li>
       <li>
-        <%= link_to "Categorias", products_path, class: "categorias" %>
+        <%= link_to "Minhas Figurinhas", my_stickers_products_path, class: "categorias" %>
       </li>
       <li>
-        <%= link_to "Adicionar Sticker", products_path, class: "add-sticker" %>
+        <%= link_to "Adicionar Sticker", new_product_path, class: "add-sticker" %>
       </li>
     </ul>
   </div>
@@ -46,81 +46,23 @@
         <%= link_to products_path do %>
           <%= image_tag "neymar.webp", alt: "stickers" %>
         <% end %>
-        <div class="grid-detail">
-          <p></p>
-          <p></p>
+      </div>
+      <div class="grid-product">
+        <%= link_to products_path do %>
+          <%= image_tag "neymar.webp", alt: "stickers" %>
+        <% end %>
+      </div>
+      <div class="grid-product">
+        <%= link_to products_path do %>
+          <%= image_tag "neymar.webp", alt: "stickers" %>
+        <% end %>
       </div>
     </div>
-
-    <div class="grid-product">
-      <%= link_to products_path do %>
-        <%= image_tag "neymar.webp", alt: "stickers" %>
-      <% end %>
-      <div class="grid-detail">
-        <p></p>
-        <p></p>
-
-   <div id="header">
-         <%= link_to root_path do %>
-      <div class="logo"> <%= image_tag "Logo.png" %> </div>
-         <% end %>
-      <div class="leftMenu">
-        <ul>
-          <li>
-            <%= link_to "Pesquisar", products_path, class: "dropdown" %>
-          </li>
-          <li>
-            <%# <%= link_to "Minhas figurinhas", my_stickers_products_path, class: "categorias" %> %>
-          </li>
-          <li>
-            <%= link_to "Adicionar Sticker", new_product_path, class: "add-sticker" %>
-          </li>
-        </ul>
-   </div>
-      <div class="rightMenu">
-        <ul>
-          <li>
-            <%= link_to "User", products_path, class: "user" %>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div id="largeImage" class="d-flex justify-content-between align-items-center">
-      <div class="description-box">
-        <h1> Troque suas figurinhas com outros colecionadores agora!</h1>
-            <%= link_to "STICKERS!", products_path, class: "button1" %>
-      </div>
-      <div class="big">
-        <%= image_tag "img_homepage.png", alt: "stickers" %>
-
-      </div>
-    </div>
-
-    <div class="grid-product">
-      <%= link_to products_path do %>
-        <%= image_tag "neymar.webp", alt: "stickers" %>
-      <% end %>
-      <div class="grid-detail">
-        <p></p>
-        <p></p>
-      </div>
-    </div>
-
-
   </div>
 </section>
 
-        <div class="grid-product">
-          <%= link_to products_path do %>
-            <%= image_tag "neymar.webp", alt: "stickers" %>
-          <% end %>
-          <div class="grid-detail">
-            <p></p>
-            <p></p>
-          </div>
-        </div>
-<div class="gallery">
+
+<div class="gallery mt-5">
   <span style="--i:1">
             <%= image_tag "qatar.stadium.png", alt: "stickers" %>
   </span>
@@ -146,4 +88,3 @@
             <%= image_tag "slog.jpg", alt: "stickers" %>
   </span>
 </div>
-

@@ -1,7 +1,37 @@
-<div class="container">
-    <p><strong>Category: <%= @product.category %></strong></p>
-    <p><strong>Title: <%= @product.title %></strong></p>
-    <p><strong>Sticker: <%= @product.sticker %></strong></p>
-    <p><strong>IMG</strong></p>
-    <small><%= link_to '', products_path(@product), class: "fa-solid fa-trash-can", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this sticker?"} %></small>
-</div>
+<div id="header">
+         <%= link_to root_path do %>
+      <div class="logo"> <%= image_tag "Logo.png" %> </div>
+         <% end %>
+      <div class="leftMenu">
+    <ul>
+      <li>
+        <%= link_to "Pesquisar", products_path, class: "dropdown" %>
+      </li>
+      <li>
+        <%= link_to "Minhas Figurinhas", my_stickers_products_path, class: "categorias" %>
+      </li>
+      <li>
+        <%= link_to "Adicionar Sticker", new_product_path, class: "add-sticker" %>
+      </li>
+    </ul>
+  </div>
+      <div class="rightMenu">
+        <ul>
+          <li>
+            <%= link_to "User", products_path, class: "user" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class='container'>
+      <div class="col-4 grid-product mb-3">
+        <%= image_tag "neymar.webp", alt: "stickers" %>
+        <div class="grid-detail">
+          <p><strong>Category: <%= @product.category %></strong></p>
+          <p><strong>Title: <%= @product.title %></strong></p>
+          <p><strong>Sticker: <%= @product.sticker %></strong></p>
+          <p><strong>User: <%= @product.user_id %></strong></p>
+        </div>
+      </div>
+    </div>
