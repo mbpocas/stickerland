@@ -27,15 +27,15 @@ Product.create!(
   category: 'Stadiums',
   title: 'Lusail Stadium outdoor',
   sticker: 'FWC16',
-  url: '',
+  url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Bra-Cos_%281%29_%28cropped%29.jpg/640px-Bra-Cos_%281%29_%28cropped%29.jpg',
   user_id: 1
 )
 
 Product.create!(
   category: 'Teams',
-  title: 'Team Shot',
+  title: 'Vinícius_Jr',
   sticker: 'BRA1',
-  url: '',
+  url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Bra-Cos_%281%29_%28cropped%29.jpg/640px-Bra-Cos_%281%29_%28cropped%29.jpg',
   user_id: 1
 )
 
