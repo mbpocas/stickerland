@@ -1,0 +1,30 @@
+<div id="header">
+         <%= link_to root_path do %>
+      <div class="logo"> <%= image_tag "Logo.png" %> </div>
+         <% end %>
+      <div class="leftMenu">
+    <ul>
+      <li>
+        <%= link_to "Pesquisar", products_path, class: "dropdown" %>
+      </li>
+      <li>
+        <%= link_to "Minhas Figurinhas", my_stickers_products_path, class: "categorias" %>
+      </li>
+      <li>
+        <%= link_to "Adicionar Sticker", new_product_path, class: "add-sticker" %>
+      </li>
+    </ul>
+  </div>
+      <div class="rightMenu">
+        <ul>
+          <li>
+            <%= link_to "User", products_path, class: "user" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+<div class='container mt-5'>
+  <h1>TROCA EFETUADA!!!!</h1>
+</div>
