@@ -6,13 +6,20 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 Product.destroy_all
+user = User.create!(
+  email: "emailtest@test.com",
+  password: "123123",
+  first_name: "Aurelio",
+  last_name: "Melo",
+  address: "Rua Pedro Victor"
+)
 puts 'Creating stickers...'
 Product.create!(
   category: 'Fifa',
   title: 'Official Trophy',
   sticker: 'FWC2',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -20,7 +27,7 @@ Product.create!(
   title: 'Official Emblem',
   sticker: 'FWC6',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -28,7 +35,7 @@ Product.create!(
   title: 'Lusail Stadium outdoor',
   sticker: 'FWC16',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -36,7 +43,7 @@ Product.create!(
   title: 'Team Shot',
   sticker: 'BRA1',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -44,7 +51,7 @@ Product.create!(
   title: 'Team Logo',
   sticker: 'BRA2',
   url: '',
-  user_id: 1
+  user: user
 )
 
 
@@ -53,7 +60,7 @@ Product.create!(
   title: 'Alisson',
   sticker: 'BRA3',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -61,7 +68,7 @@ Product.create!(
   title: 'Ederson',
   sticker: 'BRA4',
   url: '',
-  user_id: 1
+  user: user
 )
 
 
@@ -70,7 +77,7 @@ Product.create!(
   title: 'Alex Sandro',
   sticker: 'BRA5',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -78,7 +85,7 @@ Product.create!(
   title: 'Danilo',
   sticker: 'BRA6',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -86,7 +93,7 @@ Product.create!(
   title: 'Eder Militão',
   sticker: 'BRA7',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -94,7 +101,7 @@ Product.create!(
   title: 'Marquinhos',
   sticker: 'BRA8',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -102,7 +109,7 @@ Product.create!(
   title: 'Thiago Silva',
   sticker: 'BRA9',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -110,7 +117,7 @@ Product.create!(
   title: 'Casemiro',
   sticker: 'BRA10',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -118,7 +125,7 @@ Product.create!(
   title: 'Philippe Coutinho',
   sticker: 'BRA11',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -126,7 +133,7 @@ Product.create!(
   title: 'Fabinho',
   sticker: 'BRA12',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -134,7 +141,7 @@ Product.create!(
   title: 'Fred',
   sticker: 'BRA13',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -142,7 +149,7 @@ Product.create!(
   title: 'Lucas Paquetá',
   sticker: 'BRA14',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -150,7 +157,7 @@ Product.create!(
   title: 'Antony',
   sticker: 'BRA15',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -158,7 +165,7 @@ Product.create!(
   title: 'Gabriel Jesus',
   sticker: 'BRA16',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -166,7 +173,7 @@ Product.create!(
   title: 'Neymar Jr',
   sticker: 'BRA17',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -174,7 +181,7 @@ Product.create!(
   title: 'Raphinha',
   sticker: 'BRA18',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -182,7 +189,7 @@ Product.create!(
   title: 'Richarlison',
   sticker: 'BRA19',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -190,7 +197,7 @@ Product.create!(
   title: 'Vinícius Jr',
   sticker: 'BRA20',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -198,7 +205,7 @@ Product.create!(
   title: 'Cristiano Ronaldo',
   sticker: 'POR18',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -206,7 +213,7 @@ Product.create!(
   title: 'Lionel Messi',
   sticker: 'ARG20',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -214,7 +221,7 @@ Product.create!(
   title: 'Robert Lewandowski',
   sticker: 'POL17',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -222,7 +229,7 @@ Product.create!(
   title: 'Team Logo',
   sticker: 'FRA2',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -230,7 +237,7 @@ Product.create!(
   title: 'Kylian Mbappé',
   sticker: 'FRA19',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -238,7 +245,7 @@ Product.create!(
   title: 'Karim Benzema',
   sticker: 'FRA16',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -246,7 +253,7 @@ Product.create!(
   title: 'Al Rihla',
   sticker: 'FWC18',
   url: '',
-  user_id: 1
+  user: user
 )
 
 Product.create!(
@@ -254,6 +261,6 @@ Product.create!(
   title: 'Team Logo',
   sticker: 'NED2',
   url: '',
-  user_id: 1
+  user: user
 )
 puts 'Finished!'
