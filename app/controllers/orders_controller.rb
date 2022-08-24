@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_product, only: :show
+  before_action :set_order, only: :show
   def new
     @order = Order.new
     @product = Product.find(params[:product_id])
