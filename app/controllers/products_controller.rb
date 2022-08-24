@@ -1,9 +1,13 @@
 class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: %i[show edit update destroy]
 
   def index
-    @products = Product.all
+    @products = Product.where.not(user: current_user)
+  end
+
+  def my_stickers
+    @products = Product.where(user: current_user)
   end
 
   def show
@@ -34,7 +38,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
-    redirect_to product_path, status: :see_other
+    redirect_to my_stickers_products_path, status: :see_other
   end
 
   private
