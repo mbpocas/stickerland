@@ -6,7 +6,15 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 Product.destroy_all
+user = User.create!(
+  email: "emailtest@test.com",
+  password: "123123",
+  first_name: "Aurelio",
+  last_name: "Melo",
+  address: "Rua Pedro Victor"
+)
 puts 'Creating stickers...'
+
 # Product.create!(
 #   category: 'Fifa',
 #   title: 'Official Trophy',
@@ -267,4 +275,5 @@ Dir["IMG STICKERS/**/*"].each do |n|
     user_id: 1
   )
 end
+
 puts 'Finished!'

@@ -26,19 +26,18 @@
 
 
 <div class="container">
-  <h2><strong>FIGURINHAS</strong></h2>
+  <h2><strong>MINHAS FIGURINHAS</strong></h2>
   <div class="row" style="width: 60rem;" >
+  <p><%= link_to "Adicionar Sticker", new_product_path, class: 'btn btn-outline-dark' %></p>
     <% @products.each do |product| %>
       <div class="col-4 grid-product mb-3">
-        <%= cl_image_tag(product.url,
-        width: 400, height: 300, crop: :fill) %>
-        <%#= image_tag product.url, alt: "stickers" %>
+        <%= image_tag "neymar.webp", alt: "stickers" %>
         <div class="grid-detail">
           <p><strong><%= product.category %></strong></p>
           <p><strong>Title: </strong><%= product.title  %></p>
           <p><strong>Sticker: </strong><%= product.sticker  %></p>
           <p><strong>User: </strong><%= product.user_id  %></p>
-          <p><%= link_to "Trocar", new_product_order_path(product), class: 'btn btn-outline-dark'%></p>
+          <small><%= link_to '', product_path(product), class: "fa-solid fa-trash-can", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this sticker?" } %></small>
         </div>
       </div>
       <% end %>
