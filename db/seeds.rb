@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 Product.destroy_all
+User.destroy_all
+
 user = User.create!(
   email: "emailtest@test.com",
   password: "123123",
@@ -272,7 +274,7 @@ Dir["IMG STICKERS/**/*"].each do |n|
     title: response["original_filename"].gsub(/_/, " "),
     sticker: 'NED2',
     url: response["url"],
-    user_id: 1
+    user: user,
   )
 end
 
