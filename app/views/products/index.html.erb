@@ -35,7 +35,7 @@
           <p><strong><%= product.category %></strong></p>
           <p><strong>Title: </strong><%= product.title  %></p>
           <p><strong>Sticker: </strong><%= product.sticker  %></p>
-          <p><strong>User: </strong><%= product.user_id  %></p>
+          <p><small><em>User: <%= product.user.first_name  %> <%= product.user.last_name  %></em></small></p>
           <p><%= link_to "Trocar", new_product_order_path(product), class: 'btn btn-outline-dark'%></p>
         </div>
       </div>
