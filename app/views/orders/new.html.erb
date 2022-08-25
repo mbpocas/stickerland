@@ -1,47 +1,20 @@
-<div id="header">
-         <%= link_to root_path do %>
-      <div class="logo"> <%= image_tag "Logo.png" %> </div>
-         <% end %>
-      <div class="leftMenu">
-    <ul>
-      <li>
-        <%= link_to "Pesquisar", products_path, class: "dropdown" %>
-      </li>
-      <li>
-        <%= link_to "Minhas Figurinhas", my_stickers_products_path, class: "categorias" %>
-      </li>
-      <li>
-        <%= link_to "Adicionar Sticker", new_product_path, class: "add-sticker" %>
-      </li>
-    </ul>
-  </div>
-      <div class="rightMenu">
-        <ul>
-          <li>
-            <%= link_to "User", products_path, class: "user" %>
-          </li>
-        </ul>
-      </div>
+<div class='container'>
+  <div class="col-4 grid-product mb-3">
+    <%= image_tag "neymar.webp", alt: "stickers" %>
+    <div class="grid-detail">
+      <p><strong>Category: <%= @product.category %></strong></p>
+      <p><strong>Title: <%= @product.title %></strong></p>
+      <p><strong>Sticker: <%= @product.sticker %></strong></p>
+      <p><small><em>User: <%= @product.user.first_name  %> <%= @product.user.last_name  %></em></small></p>
     </div>
-
-
-  <div class='container'>
-      <div class="col-4 grid-product mb-3">
-        <%= image_tag "neymar.webp", alt: "stickers" %>
-        <div class="grid-detail">
-          <p><strong>Category: <%= @product.category %></strong></p>
-          <p><strong>Title: <%= @product.title %></strong></p>
-          <p><strong>Sticker: <%= @product.sticker %></strong></p>
-          <p><strong>User: <%= @product.user_id %></strong></p>
-        </div>
-      </div>
-    </div>
-
-  <div class='mt-5'>
-    <%= simple_form_for [@product, @order] do |f| %>
-      <%= f.input :my_sticker_id, collection: Product.where(user: current_user) / current_user.products, prompt: "Select a Sticker", input_html: { data: { controller: "select" } }%>
-      <%= f.submit "Trade", class:'btn btn-outline-dark' %>
-      <%= link_to 'Cancel', products_path, class: 'btn btn-outline-dark' %>
-    <% end %>
   </div>
+</div>
+
+<div class='mt-5'>
+  <%= simple_form_for [@product, @order] do |f| %>
+
+    <%= f.input :my_stickers_id, label: "Selecione sua Figurinha", collection: @current_user_product %>
+    <%= f.submit "Trade", class:'btn btn-outline-dark' %>
+    <%= link_to 'Cancel', products_path, class: 'btn btn-outline-dark' %>
+  <% end %>
 </div>

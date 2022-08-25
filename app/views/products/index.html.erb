@@ -1,46 +1,18 @@
-<div id="header">
-         <%= link_to root_path do %>
-      <div class="logo"> <%= image_tag "Logo.png" %> </div>
-         <% end %>
-      <div class="leftMenu">
-    <ul>
-      <li>
-        <%= link_to "Pesquisar", products_path, class: "dropdown" %>
-      </li>
-      <li>
-        <%= link_to "Minhas Figurinhas", my_stickers_products_path, class: "categorias" %>
-      </li>
-      <li>
-        <%= link_to "Adicionar Sticker", new_product_path, class: "add-sticker" %>
-      </li>
-    </ul>
-  </div>
-      <div class="rightMenu">
-        <ul>
-          <li>
-            <%= link_to "User", products_path, class: "user" %>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-
 <div class="container">
   <h2 class="h2-home">FIGURINHAS</h2>
   <div class="row" style="width: 60rem;" >
     <% @products.each do |product| %>
       <div class="col-4 grid-product mb-3">
-        <%= cl_image_tag(product.url,
-        width: 400, height: 300, crop: :fill) %>
-        <%#= image_tag product.url, alt: "stickers" %>
+        <%= cl_image_tag(product.url, width: 400, height: 300, crop: :fill) %>
+          <%#= image_tag product.url, alt: "stickers" %>
         <div class="grid-detail">
           <p><strong><%= product.category %></strong></p>
           <p><strong>Title: </strong><%= product.title  %></p>
           <p><strong>Sticker: </strong><%= product.sticker  %></p>
-          <p><strong>User: </strong><%= product.user_id  %></p>
+          <p><small><em>User: <%= product.user.first_name  %> <%= product.user.last_name  %></em></small></p>
           <p><%= link_to "Trocar", new_product_order_path(product), class: 'btn btn-outline-dark'%></p>
         </div>
       </div>
-      <% end %>
+    <% end %>
   </div>
 </div>
