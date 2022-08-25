@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
   def new
     @order = Order.new
     @product = Product.find(params[:product_id])
+    @current_user_product = Product.where(user: current_user)
   end
 
   def show
@@ -13,6 +14,9 @@ class OrdersController < ApplicationController
     @order.user = current_user
     product = Product.find(params[:product_id])
     @order.product = product
+    my_sticker = Product.find(orders_params[:my_stickers_id])
+    @order.my_stickers = my_sticker
+
     if @order.save
       redirect_to order_path(@order)
     else
@@ -24,5 +28,9 @@ class OrdersController < ApplicationController
 
   def set_order
     @order = Order.find(params[:id])
+  end
+
+  def orders_params
+    params.require(:order).permit(:my_stickers_id)
   end
 end
