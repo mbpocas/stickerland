@@ -1,7 +1,17 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "products_new";
+@import "products_my_stickers";
 
-h2 {
-  padding: 50px;
+.btn {
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  padding: 8px 16px;
 }
 
+.btn:hover {
+  transform: translate(5px, 5px);
+}
