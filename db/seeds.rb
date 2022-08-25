@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 Product.destroy_all
+
 User.destroy_all
 
 user = User.create!(
@@ -15,6 +16,7 @@ user = User.create!(
   last_name: "Melo",
   address: "Rua Pedro Victor"
 )
+
 puts 'Creating stickers...'
 
 # Product.create!(
@@ -271,7 +273,7 @@ Dir["IMG STICKERS/**/*"].each do |n|
   response = Cloudinary::Uploader.upload(n, :folder => now)
   Product.create!(
     category: 'Teams',
-    title: response["original_filename"].gsub(/_/, " "),
+    title: response["original_filename"].upcase.gsub(/_/, " "),
     sticker: 'NED2',
     url: response["url"],
     user: user,
