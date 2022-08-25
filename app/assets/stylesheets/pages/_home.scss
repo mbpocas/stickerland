@@ -15,6 +15,16 @@
  #header a:hover {
    color: red;
  }
+
+ .h2-home {
+  padding: 20px;
+  font-family: 'Ewert', cursive;
+}
+
+body{
+  background-color: rgb(242, 234, 234);
+}
+
  .logo {
    float: left;
    display: inline-block;
@@ -74,11 +84,11 @@
 
 //  box
 
-.big img {
-width: 40vw;
-}
+ .big img {
+  width: 40vw;
+ }
 
- #largeImage {
+  #largeImage {
    padding: 70px 25px;
    background: -webkit-linear-gradient(
        45deg,
@@ -91,7 +101,7 @@ width: 40vw;
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
- }
+  }
 
  .description-box {
    width: 50%;
@@ -130,19 +140,21 @@ width: 40vw;
  }
 
  .button1 {
+   font-weight: bold;
    margin-top: 25px !important;
    display: inline-block;
    text-align: center;
    text-decoration: none;
-   padding: 12px 20px;
+   padding: 8px 16px;
    color: white;
-   background-color: #62122f;
-   width: 250px;
+   background-color:transparent;
+   width: 150px;
    border-radius: 12px;
+   border: 2px solid rgb(233, 231, 231);
  }
 
- .button1:hover {
-   background: rgba(0, 0, 0, 0.6);
+ .btn:hover {
+  transform: translate(5px, 5px);
  }
 
  .fig_pic {
@@ -194,6 +206,7 @@ width: 40vw;
   height:200px;
   transform-style:preserve-3d;
   animation:rotate 35s linear infinite;
+  padding-top: 25px;
   margin: 0 0 150px 40%;
 }
 
