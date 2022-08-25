@@ -71,7 +71,7 @@ group :development do
 end
 
 gem "dotenv-rails", groups: [:development, :test]
-
+gem "cloudinary"
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
