@@ -1,6 +1,6 @@
 <div class='container'>
   <div class="col-4 grid-product mb-3">
-    <%= image_tag "neymar.webp", alt: "stickers" %>
+    <%= cl_image_tag(product.url, width: 340.157, height: 400.779, crop: :fill) %>
     <div class="grid-detail">
       <p><strong>Category: <%= @product.category %></strong></p>
       <p><strong>Title: <%= @product.title %></strong></p>
