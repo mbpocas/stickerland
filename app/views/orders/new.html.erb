@@ -32,14 +32,15 @@
           <p><strong>Category: <%= @product.category %></strong></p>
           <p><strong>Title: <%= @product.title %></strong></p>
           <p><strong>Sticker: <%= @product.sticker %></strong></p>
-          <p><strong>User: <%= @product.user_id %></strong></p>
+          <p><small><em>User: <%= @product.user.first_name  %> <%= @product.user.last_name  %></em></small></p>
         </div>
       </div>
     </div>
 
   <div class='mt-5'>
     <%= simple_form_for [@product, @order] do |f| %>
-      <%= f.input :my_sticker_id, collection: Product.where(user: current_user) / current_user.products, prompt: "Select a Sticker", input_html: { data: { controller: "select" } }%>
+
+      <%= f.input :my_stickers_id, label: "Selecione sua Figurinha", collection: @current_user_product %>
       <%= f.submit "Trade", class:'btn btn-outline-dark' %>
       <%= link_to 'Cancel', products_path, class: 'btn btn-outline-dark' %>
     <% end %>

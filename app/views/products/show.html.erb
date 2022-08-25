@@ -31,7 +31,7 @@
           <p><strong>Category: <%= @product.category %></strong></p>
           <p><strong>Title: <%= @product.title %></strong></p>
           <p><strong>Sticker: <%= @product.sticker %></strong></p>
-          <p><strong>User: <%= @product.user_id %></strong></p>
+          <p><small><em>User: <%= @product.user.first_name  %> <%= @product.user.last_name  %></em></small></p>
         </div>
       </div>
     </div>
