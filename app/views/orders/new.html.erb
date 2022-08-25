@@ -25,20 +25,23 @@
     </div>
 
 
-<div class="container">
-  <h2><strong>FIGURINHAS</strong></h2>
-  <div class="row" style="width: 60rem;" >
-    <% @products.each do |product| %>
+  <div class='container'>
       <div class="col-4 grid-product mb-3">
         <%= image_tag "neymar.webp", alt: "stickers" %>
         <div class="grid-detail">
-          <p><strong><%= product.category %></strong></p>
-          <p><strong>Title: </strong><%= product.title  %></p>
-          <p><strong>Sticker: </strong><%= product.sticker  %></p>
-          <p><strong>User: </strong><%= product.user_id  %></p>
-          <p><%= link_to "Trocar", new_product_order_path(product), class: 'btn btn-outline-dark'%></p>
+          <p><strong>Category: <%= @product.category %></strong></p>
+          <p><strong>Title: <%= @product.title %></strong></p>
+          <p><strong>Sticker: <%= @product.sticker %></strong></p>
+          <p><strong>User: <%= @product.user_id %></strong></p>
         </div>
       </div>
-      <% end %>
+    </div>
+
+  <div class='mt-5'>
+    <%= simple_form_for [@product, @order] do |f| %>
+      <%= f.input :my_sticker_id, collection: Product.where(user: current_user) / current_user.products, prompt: "Select a Sticker", input_html: { data: { controller: "select" } }%>
+      <%= f.submit "Trade", class:'btn btn-outline-dark' %>
+      <%= link_to 'Cancel', products_path, class: 'btn btn-outline-dark' %>
+    <% end %>
   </div>
 </div>
