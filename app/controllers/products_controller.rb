@@ -32,7 +32,16 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @product.update(product_params)
+    product = Product.find(params[:id])
+    my_sticker = Product.find(params[:id])
+
+    product_user = product.user
+    product.user = my_sticker.user
+    my_sticker.user = product_user
+
+    product.save
+    my_sticker.save
+
     redirect_to product_path(@product)
   end
 
