@@ -32,7 +32,6 @@
       <div class="col-4 grid-product mb-3">
         <%= cl_image_tag(product.url,
         width: 340.157, height: 400.779, crop: :fill) %>
-        <%#= image_tag product.url, alt: "stickers" %>
         <div class="grid-detail">
           <p><strong><%= product.category %></strong></p>
           <p><strong>Title: </strong><%= product.title  %></p>
@@ -44,4 +43,3 @@
       <% end %>
   </div>
 </div>
-<%#  %>
