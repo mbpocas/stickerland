@@ -39,7 +39,7 @@
 
   <div class='mt-5'>
     <%= simple_form_for [@product, @order] do |f| %>
-      <%= f.association :product, prompt: "Select a Sticker", input_html: { data: { controller: "select" } }%>
+      <%= f.input :my_sticker_id, collection: Product.where(user: current_user) / current_user.products, prompt: "Select a Sticker", input_html: { data: { controller: "select" } }%>
       <%= f.submit "Trade", class:'btn btn-outline-dark' %>
       <%= link_to 'Cancel', products_path, class: 'btn btn-outline-dark' %>
     <% end %>
