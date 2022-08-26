@@ -17,13 +17,12 @@
   transform: translate(5px, 5px);
 }
 
-
 .container {
-  width: 1240px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
