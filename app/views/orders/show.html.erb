@@ -28,3 +28,26 @@
 <div class='container mt-5'>
   <h1>TROCA EFETUADA!!!!</h1>
 </div>
+
+<div class="grid">
+  <div class="grid-product">
+     <%= cl_image_tag(@product.url,
+        width: 340.157, height: 400.779, crop: :fill) %>
+  </div>
+
+<div class= "grid-product">
+  <div class="d-flex align-self-center">
+    <i class= "fa-solid fa-right-left fa-10x mb-3"></i>
+  </div>
+</div>
+
+
+<div class="grid-product">
+    <%= cl_image_tag(@my_sticker.url,
+        width: 340.157, height: 400.779, crop: :fill, alt: "Sua figurinha adicionada") %>
+</div>
+</div>
+
+
+
+<%# order.product e order.my_sticker %>

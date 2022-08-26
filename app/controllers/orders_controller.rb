@@ -7,6 +7,9 @@ class OrdersController < ApplicationController
   end
 
   def show
+    @order = Order.find(params[:id])
+    @product = Product.find(@order.product_id)
+    @my_sticker = Product.find(@order.my_stickers_id)
   end
 
   def create
