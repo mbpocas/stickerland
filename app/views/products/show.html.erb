@@ -10,10 +10,10 @@
         <p><small><strong><em>User: <%= @product.user.first_name %> <%= @product.user.last_name %></em></strong></small></p>
       </div>
 
-      <% if @product.user_id != current_user.id? %>
-        <%= link_to "Trocar", new_product_order_path(@product), class: 'btn btn-outline-dark' %>
-      <% else%>
+      <% if @product.user == current_user %>
         <%= link_to "Editar", edit_product_path(@product), class: 'btn btn-outline-dark'%>
+      <% else%>
+        <%= link_to "Trocar", new_product_order_path(@product), class: 'btn btn-outline-dark' %>
       <% end%>
 
     </div>
