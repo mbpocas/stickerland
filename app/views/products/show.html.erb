@@ -1,11 +1,22 @@
 <div class='container'>
-  <div class="col-4 grid-product mb-3">
-    <%= image_tag "neymar.webp", alt: "stickers" %>
-    <div class="grid-detail">
-      <p><strong>Category: <%= @product.category %></strong></p>
-      <p><strong>Title: <%= @product.title %></strong></p>
-      <p><strong>Sticker: <%= @product.sticker %></strong></p>
-      <p><small><em>User: <%= @product.user.first_name  %> <%= @product.user.last_name  %></em></small></p>
+  <div class="card-sticker">
+    <%= cl_image_tag(@product.url) %>
+    <div class="card-sticker-infos">
+      <div>
+        <h2><%= @product.category %></h2>
+        <p><strong>Title: <%= @product.title %></strong></p>
+        <p><strong>Sticker: <%= @product.sticker %></strong></p>
+        <p><small><strong><em>User: <%= @product.user.first_name %> <%= @product.user.last_name %></em></strong></small></p>
+      </div>
+
+      <% if @product.user_id != current_user.id? %>
+        <%= link_to "Trocar", new_product_order_path(@product), class: 'btn btn-outline-dark' %>
+      <% else%>
+        <%= link_to "Editar", edit_product_path(@product), class: 'btn btn-outline-dark'%>
+      <% end%>
+
     </div>
   </div>
 </div>
+
+<%# add if no botao trocar, se for do usuario aparecer minhas fig (voltar) %>
