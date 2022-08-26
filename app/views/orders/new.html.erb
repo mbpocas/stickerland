@@ -1,5 +1,6 @@
+<div class="d-flex pt-5 ">
 <div class='container'>
-  <div class="col-4 grid-product mb-3">
+  <div class="col-4 grid-product mb-3 d-flex align-items-center flex-column">
     <%= image_tag "neymar.webp", alt: "stickers" %>
     <div class="grid-detail">
       <p><strong>Category: <%= @product.category %></strong></p>
@@ -10,11 +11,18 @@
   </div>
 </div>
 
-<div class='mt-5'>
-  <%= simple_form_for [@product, @order] do |f| %>
+<div class="container formulario">
+  <div class="row w-100 justify-content-center">
+    <div class="col-xs-12 col-sm-10 col-md-8 ">
+      <div class='mt-5'>
+        <%= simple_form_for [@product, @order] do |f| %>
 
-    <%= f.input :my_stickers_id, label: "Selecione sua Figurinha", collection: @current_user_product %>
-    <%= f.submit "Trade", class:'btn btn-outline-dark' %>
-    <%= link_to 'Cancel', products_path, class: 'btn btn-outline-dark' %>
-  <% end %>
+          <%= f.input :my_stickers_id, label: "Selecione sua Figurinha", collection: @current_user_product %>
+          <%= f.submit "Trocar", class:'btn btn-outline-dark' %>
+          <%= link_to 'Cancelar', products_path, class: 'btn btn-outline-dark' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 </div>

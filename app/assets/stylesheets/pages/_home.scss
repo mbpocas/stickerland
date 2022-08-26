@@ -8,7 +8,7 @@
  }
 
  #header a {
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-family: "Qatar", sans-serif;
    text-decoration: none;
  }
 
@@ -18,7 +18,7 @@
 
  .h2-home {
   padding: 20px;
-  font-family: 'Ewert', cursive;
+  font-family: "Qatar", sans-serif;
 }
 
 body{
@@ -234,4 +234,13 @@ body{
   width:100%;
   height:100%;
   object-fit:cover;
+}
+
+.formulario {
+  border: 5px solid black;
+  background-color: white;
+  box-shadow: 20px 15px 0 gray;
+  padding: 50px;
+  margin: 0 auto;
+  width: 900px;
 }
