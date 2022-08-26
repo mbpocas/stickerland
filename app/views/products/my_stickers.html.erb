@@ -4,20 +4,31 @@
       <p><%= link_to "Adicionar Sticker", new_product_path, class: 'btn btn-outline-dark' %></p>
     <% @products.each do |product| %>
       <div class="col-4 grid-product mb-3">
-      <% if product.photo.present? %>
-          <%= cl_image_tag(product.photo.key, width: 400, height: 300, crop: :fill) %>
-        <% else %>
-          <%= image_tag "neymar.webp", alt: "stickers" %>
-        <% end %>
-        <div class="grid-detail">
-          <p><strong><%= product.category %></strong></p>
-          <p><strong>Title: </strong><%= product.title  %></p>
-          <p><strong>Sticker: </strong><%= product.sticker  %></p>
-          <div class='buttons d-flex justify-content-around align-items-baseline'>
-            <p><%= link_to "Editar", edit_product_path(product), class: 'btn btn-outline-dark'%></p>
-            <%= link_to '', product_path(product), class: "fa-solid fa-trash-can", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this sticker?" } %>
-          </div>
+
+        <div class="card-sticker">
+          <%= link_to product_path(product), class: "grid-detail" do %>
+            <% if product.photo.present? %>
+              <%= cl_image_tag(product.photo.key, width: 400, height: 300, crop: :fill) %>
+            <% else %>
+              <%= image_tag "neymar.webp", alt: "stickers" %>
+            <% end %>
+          
+          <div class="card-sticker-infos">
+              <div>
+                <h2><%= product.category %></h2>
+                <p><strong>Nome: <%= product.title %></strong></p>
+                <p><strong>Cod. Figurinha: <%= product.sticker %></strong></p>
+                <p><small><strong><em><%= product.user.first_name %> <%= product.user.last_name %></em></strong></small></p>
+              </div>
+              <div class='buttons d-flex justify-content-around align-items-baseline'>
+                <%= link_to "Editar", edit_product_path(product), class: 'btn btn-outline-dark me-3'%>
+                <div class= 'btn btn-outline-dark'><%= link_to '', product_path(product), class: "fa-solid fa-trash-can", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this sticker?" } %></div>
+              </div>
+            </div>
+          <% end %>
         </div>
+
+
       </div>
     <% end %>
   </div>

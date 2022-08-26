@@ -1,0 +1,39 @@
+.container {
+  padding: 40px;
+}
+
+.card-sticker {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  color: black;
+  text-align: left;
+  padding: 20px;
+  justify-content: center;
+}
+
+.card-sticker > img {
+  height: 420px;
+  width: 300px;
+  object-fit: fill;
+}
+
+.card-sticker h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-sticker p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-sticker .card-sticker-infos {
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
