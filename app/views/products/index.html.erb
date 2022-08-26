@@ -5,26 +5,27 @@
     <% @products.each do |product| %>
       <div class="col-4 grid-product mb-3">
 
-        <div class="card-sticker">
-          <%= link_to product_path(product), class: "grid-detail" do %>
-              <% if product.photo.present? %>
-                <%= cl_image_tag(product.photo.key, width: 400, height: 300, crop: :fill) %>
-              <% else %>
-                <%= image_tag "neymar.webp", alt: "stickers" %>
-              <% end %>
-          <div class="card-sticker-infos">
-              <div>
-                <h2><%= product.category %></h2>
-                <p><strong>Nome: <%= product.title %></strong></p>
-                <p><strong>Cod. Figurinha: <%= product.sticker %></strong></p>
-                <p><small><strong><em><%= product.user.first_name %> <%= product.user.last_name %></em></strong></small></p>
+        <%= link_to product_path(product) do %>
+
+          <div class="card-sticker">
+            <%= link_to product_path(product), class: "grid-detail" do %>
+                <% if product.photo.present? %>
+                  <%= cl_image_tag(product.photo.key, width: 400, height: 300, crop: :fill) %>
+                <% else %>
+                  <%= image_tag "neymar.webp", alt: "stickers" %>
+                <% end %>
+            <div class="card-sticker-infos">
+                <div>
+                  <h2><%= product.category %></h2>
+                  <p><strong>Nome: <%= product.title %></strong></p>
+                  <p><strong>Cod. Figurinha: <%= product.sticker %></strong></p>
+                  <p><small><strong><em><%= product.user.first_name %> <%= product.user.last_name %></em></strong></small></p>
+                </div>
+                <%= link_to "Trocar", new_product_order_path(product), class: 'btn btn-outline-dark' %>
               </div>
-              <%= link_to "Trocar", new_product_order_path(product), class: 'btn btn-outline-dark' %>
-            </div>
-          <% end %>
-
-        </div>
-
+            <% end %>
+          </div>
+        <% end %>
       </div>
     <% end %>
 
