@@ -12,7 +12,7 @@
             <% else %>
               <%= image_tag "neymar.webp", alt: "stickers" %>
             <% end %>
-          
+
           <div class="card-sticker-infos">
               <div>
                 <h2><%= product.category %></h2>
@@ -22,7 +22,7 @@
               </div>
               <div class='buttons d-flex justify-content-around align-items-baseline'>
                 <%= link_to "Editar", edit_product_path(product), class: 'btn btn-outline-dark me-3'%>
-                <div class= 'btn btn-outline-dark'><%= link_to '', product_path(product), class: "fa-solid fa-trash-can", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this sticker?" } %></div>
+                <div class= 'btn btn-outline-dark'><%= link_to '', product_path(product), class: "fa-solid fa-trash-can", data: { turbo_method: :delete, turbo_confirm: "Você tem certeza que quer destruir esse sticker?" } %></div>
               </div>
             </div>
           <% end %>
