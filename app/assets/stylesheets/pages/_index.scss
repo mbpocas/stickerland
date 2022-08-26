@@ -1,5 +1,6 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "show";
 @import "products_new";
 @import "products_my_stickers";
 
@@ -8,10 +9,14 @@
   border: none;
   font-weight: bold;
   color: white;
-  background-color: black;
+  background-color: #62122f;
   padding: 8px 16px;
 }
 
 .btn:hover {
   transform: translate(5px, 5px);
 }
+
+// .grid-detail{
+//   text-decoration-line: none;
+// }
