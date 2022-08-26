@@ -4,6 +4,7 @@ class Order < ApplicationRecord
   belongs_to :my_stickers, class_name: 'Product'
 
   after_create :update_stickers
+  has_one_attached :photo
 
   private
 
