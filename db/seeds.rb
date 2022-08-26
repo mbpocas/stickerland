@@ -34,3 +34,4 @@ puts 'Creating stickers...'
 end
 
 puts 'Finished!'
+
