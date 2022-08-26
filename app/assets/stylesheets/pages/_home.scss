@@ -21,9 +21,9 @@
   font-family: "Qatar", sans-serif;
 }
 
-body{
+ body{
   background-color: rgb(242, 234, 234);
-}
+ }
 
  .logo {
    float: left;
@@ -88,7 +88,7 @@ body{
   width: 40vw;
  }
 
-  #largeImage {
+ #largeImage {
     padding: 70px 25px;
     background: -webkit-linear-gradient(
         45deg,
@@ -101,14 +101,14 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+ }
 
  .description-box {
    width: 50%;
  }
 
  .description-box h1 {
-   font-family: serif;
+   font-family: "Qatar", sans-serif;
    font-weight: 700;
    font-size: 60px;
    margin: 0;
@@ -116,7 +116,7 @@ body{
  }
 
  .description-box h3 {
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Qatar", sans-serif;
    font-weight: 4;
    font-size: 25px;
    margin: 0;
@@ -124,7 +124,7 @@ body{
  }
 
  .description-box h4 {
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Qatar", sans-serif;
    font-weight: 300;
    margin: 0px;
    color: white;
@@ -215,5 +215,4 @@ body{
   box-shadow: 20px 15px 0 gray;
   padding: 50px;
   margin: 0 auto;
-  width: 900px;
 }
