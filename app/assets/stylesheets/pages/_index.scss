@@ -17,6 +17,37 @@
   transform: translate(5px, 5px);
 }
 
-// .grid-detail{
-//   text-decoration-line: none;
-// }
+
+.container {
+  width: 1240px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 100px;
+}
+
+.grid-product:hover {
+  background: #e1e1e1;
+}
+.grid-product img {
+  height: 350px;
+  width: 250px;
+  object-fit: fill;
+}
+.grid-detail {
+  margin: 20px 0;
+  color: black;
+  text-align: left;
+  text-decoration-line: none;
+}
+.grid-detail p:last-child {
+  transition: .5s;
+  margin-top: 10px;
+}
+.grid-product:hover > .grid-detail p:last-child {
+  color: #3498db;
+}
