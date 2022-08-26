@@ -4,6 +4,7 @@
       <%= simple_form_for @product do |f| %>
         <%# <%= f.input :category, collection: Product::CATEGORIES %>
         <%= f.input :title %>
+        <%= f.input :photo, as: :file %>
         <%= f.submit class: 'btn btn-outline-dark' %>
       <% end %>
     </div>
