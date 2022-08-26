@@ -3,7 +3,7 @@
 
     <div class="card-sticker">
       <% if @product.photo.present? %>
-        <%= cl_image_tag(@product.photo.key, width: 400, height: 300, crop: :fill) %>
+        <%= cl_image_tag(@product.photo.key, width: 400, height: 300, crop: :fit) %>
       <% else %>
         <%= image_tag "neymar.webp", alt: "stickers" %>
       <% end %>
