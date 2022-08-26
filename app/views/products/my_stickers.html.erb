@@ -23,6 +23,7 @@
               <div class='buttons d-flex justify-content-around align-items-baseline'>
                 <%= link_to "Editar", edit_product_path(product), class: 'btn btn-outline-dark me-3'%>
                 <div class= 'btn btn-outline-dark'><%= link_to '', product_path(product), class: "fa-solid fa-trash-can", data: { turbo_method: :delete, turbo_confirm: "Tem certeza que deseja deletar essa Figurinha?" } %></div>
+
               </div>
             </div>
           <% end %>
