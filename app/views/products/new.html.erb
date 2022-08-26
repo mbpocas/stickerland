@@ -5,6 +5,7 @@
         <%= f.input :category, collection: Product::CATEGORIES %>
         <%= f.input :title, placeholder: "Trofeu"%>
         <%= f.input :sticker, placeholder: "FWC2" %>
+        <%= f.input :photo, as: :file %>
         <%= f.submit class: 'btn btn-outline-dark' %>
       <% end %>
     </div>

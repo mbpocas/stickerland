@@ -1,12 +1,22 @@
  <div class="row">
   <div class='container col-4 grid-product text-center mb-3'>
-      <%= image_tag "neymar.webp", alt: "stickers", class: "mx-auto" %>
-      <div class="grid-detail">
-        <p><strong>Category: <%= @product.category %></strong></p>
-        <p><strong>Title: <%= @product.title %></strong></p>
-        <p><strong>Sticker: <%= @product.sticker %></strong></p>
-        <p><small><em>User: <%= @product.user.first_name  %> <%= @product.user.last_name  %></em></small></p>
-      </div>
+    <div class="card-sticker justify-content-center">
+      <%= link_to product_path(@product), class: "grid-detail" do %>
+        <% if @product.photo.present? %>
+          <%= cl_image_tag(@product.photo.key, width: 400, height: 300, crop: :fill) %>
+        <% else %>
+          <%= image_tag "neymar.webp", alt: "stickers" %>
+        <% end %>
+        <div class="card-sticker-infos">
+          <div>
+            <h2><%= @product.category %></h2>
+            <p><strong>Nome: <%= @product.title %></strong></p>
+            <p><strong>Cod. Figurinha: <%= @product.sticker %></strong></p>
+            <p><small><strong><em><%= @product.user.first_name %> <%= @product.user.last_name %></em></strong></small></p>
+          </div>
+        </div>
+      <% end %>
+    </div>    
   </div>
 
   <div class="container col-6 w-50 formulario" style="max-height: 300px; margin-top: auto; margin-bottom: auto">
