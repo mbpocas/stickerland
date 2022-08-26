@@ -1,7 +1,8 @@
 <div class='container mt-5'>
-  <h1>TROCA EFETUADA!!!!</h1>
-  <div class="col-4 grid-product mb-3">
+  <h2 class='h2-home'>TROCA EFETUADA!!!!</h2>
 
+
+<div class ='troca d-flex justify-content-around'>
     <div class="card-sticker">
       <% if @order.product.photo.present? %>
         <%= cl_image_tag(@order.product.photo.key, width: 400, height: 300, crop: :fill) %>
@@ -19,19 +20,7 @@
     </div>
 
     <div class="card-sticker">
-      <% if @order.my_stickers.photo.present? %>
-        <%= cl_image_tag(@order.my_stickers.photo.key, width: 400, height: 300, crop: :fill) %>
-      <% else %>
-        <%= image_tag "neymar.webp", alt: "stickers" %>
-      <% end %>
-      <div class="card-sticker-infos">
-        <div>
-          <h2><%= @order.my_stickers.category %></h2>
-          <p><strong>Nome: <%= @order.my_stickers.title %></strong></p>
-          <p><strong>Cod. Figurinha: <%= @order.my_stickers.sticker %></strong></p>
-          <p><small><strong><em><%= @order.my_stickers.user.first_name %> <%= @order.my_stickers.user.last_name %></em></strong></small></p>
-        </div>
-      </div>
+        <%= image_tag "setas", alt: "troca" %>
     </div>
 
     <div class="card-sticker">
@@ -50,8 +39,8 @@
       </div>
     </div>
 
+</div>
 
 
 
-  </div>
 </div>
