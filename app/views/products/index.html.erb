@@ -3,8 +3,11 @@
   <div class="row" style="width: 60rem;" >
     <% @products.each do |product| %>
       <div class="col-4 grid-product mb-3">
-        <%= cl_image_tag(product.url, width: 400, height: 300, crop: :fill) %>
-          <%#= image_tag product.url, alt: "stickers" %>
+        <% if product.photo.present? %>
+          <%= cl_image_tag(product.photo.key, width: 400, height: 300, crop: :fill) %>
+        <% else %>
+          <%= image_tag "neymar.webp", alt: "stickers" %>
+        <% end %>
         <div class="grid-detail">
           <p><strong><%= product.category %></strong></p>
           <p><strong>Title: </strong><%= product.title  %></p>

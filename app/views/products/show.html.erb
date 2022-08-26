@@ -1,10 +1,14 @@
 <div class='container'>
   <div class="col-4 grid-product mb-3">
-    <%= image_tag "neymar.webp", alt: "stickers" %>
+    <% if @product.photo.present? %>
+          <%= cl_image_tag(@product.photo.key, width: 400, height: 300, crop: :fill) %>
+        <% else %>
+          <%= image_tag "neymar.webp", alt: "stickers" %>
+        <% end %>
     <div class="grid-detail">
-      <p><strong>Category: <%= @product.category %></strong></p>
-      <p><strong>Title: <%= @product.title %></strong></p>
-      <p><strong>Sticker: <%= @product.sticker %></strong></p>
+      <p><strong>Categoria: <%= @product.category %></strong></p>
+      <p><strong>Nome: <%= @product.title %></strong></p>
+      <p><strong>Cod. Figurinha: <%= @product.sticker %></strong></p>
       <p><small><em>User: <%= @product.user.first_name  %> <%= @product.user.last_name  %></em></small></p>
     </div>
   </div>
