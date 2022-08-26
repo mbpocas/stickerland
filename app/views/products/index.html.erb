@@ -1,18 +1,26 @@
 <div class="container">
   <h2 class="h2-home">FIGURINHAS</h2>
   <div class="row" style="width: 60rem;" >
+
     <% @products.each do |product| %>
       <div class="col-4 grid-product mb-3">
-        <%= cl_image_tag(product.url, width: 400, height: 300, crop: :fill) %>
-          <%#= image_tag product.url, alt: "stickers" %>
-        <div class="grid-detail">
-          <p><strong><%= product.category %></strong></p>
-          <p><strong>Title: </strong><%= product.title  %></p>
-          <p><strong>Sticker: </strong><%= product.sticker  %></p>
-          <p><small><em>User: <%= product.user.first_name  %> <%= product.user.last_name  %></em></small></p>
-          <p><%= link_to "Trocar", new_product_order_path(product), class: 'btn btn-outline-dark'%></p>
+        <div class="card-sticker">
+          <%= link_to product_path(product), class: "grid-detail" do %>
+            <%= cl_image_tag(product.url) %>
+            <div class="card-sticker-infos">
+              <div>
+                <h2><%= product.category %></h2>
+                <p><strong>Title: <%= product.title %></strong></p>
+                <p><strong>Sticker: <%= product.sticker %></strong></p>
+                <p><small><strong><em>User: <%= product.user.first_name %> <%= product.user.last_name %></em></strong></small></p>
+              </div>
+              <%= link_to "Trocar", new_product_order_path(product), class: 'btn btn-outline-dark' %>
+            </div>
+          <% end %>
         </div>
+
       </div>
     <% end %>
+
   </div>
 </div>
