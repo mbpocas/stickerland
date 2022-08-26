@@ -1,7 +1,52 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "show";
+@import "products_new";
+@import "products_my_stickers";
 
-h2 {
-  padding: 50px;
+.btn {
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  color: white;
+  background-color: #62122f;
+  padding: 8px 16px;
 }
 
+.btn:hover {
+  transform: translate(5px, 5px);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 100px;
+}
+
+.grid-product:hover {
+  background: #e1e1e1;
+}
+.grid-product img {
+  height: 350px;
+  width: 250px;
+  object-fit: fill;
+}
+.grid-detail {
+  margin: 20px 0;
+  color: black;
+  text-align: left;
+  text-decoration-line: none;
+}
+.grid-detail p:last-child {
+  transition: .5s;
+  margin-top: 10px;
+}
+.grid-product:hover > .grid-detail p:last-child {
+  color: #3498db;
+}

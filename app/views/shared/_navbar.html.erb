@@ -1,36 +1,42 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
+<div id="header">
+  <%= link_to root_path do %>
+    <div class="logo"> <%= image_tag "Logo.png" %> </div>
+  <% end %>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <div class="leftMenu">
+    <ul>
+      <li>
+        <%= link_to "Pesquisar", products_path, class: "dropdown" %>
+      </li>
+      <li>
+        <%= link_to "Minhas Figurinhas", my_stickers_products_path, class: "categorias" %>
+      </li>
+      <li>
+        <%= link_to "Adicionar Sticker", new_product_path, class: "add-sticker" %>
+      </li>
+    </ul>
+  </div>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
+  <div class="rightMenu">
+    <ul>
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+          <li class="user">
+            <%= link_to "Hi, #{current_user.email}", edit_user_registration_path, class: 'nav-link' %>
+            <%# <%= current_user.first_name + " " + current_user.last_name %>
           </li>
-          <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-            </div>
+          <li>
+            <%= link_to "Sair", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
           </li>
         <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
+            <li>
+              <%= link_to "Entrar", new_user_session_path, class: "nav-link" %>
+            </li>
+            <li>
+              <%= link_to 'Cadastro', new_user_registration_path, class: 'nav-link' %>
+            </li>
         <% end %>
-      </ul>
-    </div>
+      </div>
+    </ul>
   </div>
+
 </div>

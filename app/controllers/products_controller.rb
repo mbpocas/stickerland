@@ -32,16 +32,7 @@ class ProductsController < ApplicationController
   end
 
   def update
-    product = Product.find(params[:id])
-    my_sticker = Product.find(params[:id])
-
-    product_user = product.user
-    product.user = my_sticker.user
-    my_sticker.user = product_user
-
-    product.save
-    my_sticker.save
-
+    @product.update(product_params)
     redirect_to product_path(@product)
   end
 
@@ -57,6 +48,6 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:title, :sticker, :url, :category)
+    params.require(:product).permit(:title, :sticker, :url, :category, :photo)
   end
 end

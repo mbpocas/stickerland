@@ -8,13 +8,23 @@
  }
 
  #header a {
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-family: "Qatar", sans-serif;
    text-decoration: none;
  }
 
  #header a:hover {
    color: red;
  }
+
+ .h2-home {
+  padding: 20px;
+  font-family: "Qatar", sans-serif;
+}
+
+ body{
+  background-color: rgb(242, 234, 234);
+ }
+
  .logo {
    float: left;
    display: inline-block;
@@ -74,23 +84,23 @@
 
 //  box
 
-.big img {
-width: 40vw;
-}
+ .big img {
+  width: 40vw;
+ }
 
  #largeImage {
-   padding: 70px 25px;
-   background: -webkit-linear-gradient(
-       45deg,
-       rgba(231, 31, 17, 0.7) 0%,
-       #000000 100%
-     ),
-     url(http://cdn.collider.com/wp-content/uploads/Bane-Batman-standoff-The-Dark-Knight-Rises-wall-poster1.jpg)
-       no-repeat left center;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
+    padding: 70px 25px;
+    background: -webkit-linear-gradient(
+        45deg,
+        rgba(231, 31, 17, 0.7) 0%,
+        #000000 100%
+      ),
+      url(http://cdn.collider.com/wp-content/uploads/Bane-Batman-standoff-The-Dark-Knight-Rises-wall-poster1.jpg)
+        no-repeat left center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
  }
 
  .description-box {
@@ -98,7 +108,7 @@ width: 40vw;
  }
 
  .description-box h1 {
-   font-family: serif;
+   font-family: "Qatar", sans-serif;
    font-weight: 700;
    font-size: 60px;
    margin: 0;
@@ -106,7 +116,7 @@ width: 40vw;
  }
 
  .description-box h3 {
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Qatar", sans-serif;
    font-weight: 4;
    font-size: 25px;
    margin: 0;
@@ -114,7 +124,7 @@ width: 40vw;
  }
 
  .description-box h4 {
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Qatar", sans-serif;
    font-weight: 300;
    margin: 0px;
    color: white;
@@ -130,19 +140,21 @@ width: 40vw;
  }
 
  .button1 {
+   font-weight: bold;
    margin-top: 25px !important;
    display: inline-block;
    text-align: center;
    text-decoration: none;
-   padding: 12px 20px;
+   padding: 8px 16px;
    color: white;
-   background-color: #62122f;
-   width: 250px;
+   background-color:transparent;
+   width: 150px;
    border-radius: 12px;
+   border: 2px solid rgb(233, 231, 231);
  }
 
- .button1:hover {
-   background: rgba(0, 0, 0, 0.6);
+ .btn:hover {
+  transform: translate(5px, 5px);
  }
 
  .fig_pic {
@@ -159,34 +171,7 @@ width: 40vw;
   font-weight: 300;
   margin-bottom: 50px;
 }
-.container {
-  width: 1070px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 100px;
-}
-.grid-product:hover {
-  background: #e1e1e1;
-}
-.grid-product img {
-  width: 300px;
-}
-.grid-detail {
-  margin: 20px 0;
-  text-align: center;
-}
-.grid-detail p:last-child {
-  transition: .5s;
-  margin-top: 10px;
-}
-.grid-product:hover > .grid-detail p:last-child {
-  color: #3498db;
-}
+
 
 .gallery{
   position:relative;
@@ -194,6 +179,7 @@ width: 40vw;
   height:200px;
   transform-style:preserve-3d;
   animation:rotate 35s linear infinite;
+  padding-top: 25px;
   margin: 0 0 150px 40%;
 }
 
@@ -221,4 +207,12 @@ width: 40vw;
   width:100%;
   height:100%;
   object-fit:cover;
+}
+
+.formulario {
+  border: 5px solid black;
+  background-color: white;
+  box-shadow: 20px 15px 0 gray;
+  padding: 50px;
+  margin: 0 auto;
 }

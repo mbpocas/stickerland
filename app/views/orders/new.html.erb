@@ -1,48 +1,36 @@
-<div id="header">
-         <%= link_to root_path do %>
-      <div class="logo"> <%= image_tag "Logo.png" %> </div>
-         <% end %>
-      <div class="leftMenu">
-    <ul>
-      <li>
-        <%= link_to "Pesquisar", products_path, class: "dropdown" %>
-      </li>
-      <li>
-        <%= link_to "Minhas Figurinhas", my_stickers_products_path, class: "categorias" %>
-      </li>
-      <li>
-        <%= link_to "Adicionar Sticker", new_product_path, class: "add-sticker" %>
-      </li>
-    </ul>
+ <div class="row">
+  <div class='container col-4 grid-product text-center mb-3'>
+    <div class="card-sticker justify-content-center">
+      <%= link_to product_path(@product), class: "grid-detail" do %>
+        <% if @product.photo.present? %>
+          <%= cl_image_tag(@product.photo.key, width: 400, height: 300, crop: :fill) %>
+        <% else %>
+          <%= image_tag "neymar.webp", alt: "stickers" %>
+        <% end %>
+        <div class="card-sticker-infos">
+          <div>
+            <h2><%= @product.category %></h2>
+            <p><strong>Nome: <%= @product.title %></strong></p>
+            <p><strong>Cod. Figurinha: <%= @product.sticker %></strong></p>
+            <p><small><strong><em><%= @product.user.first_name %> <%= @product.user.last_name %></em></strong></small></p>
+          </div>
+        </div>
+      <% end %>
+    </div>    
   </div>
-      <div class="rightMenu">
-        <ul>
-          <li>
-            <%= link_to "User", products_path, class: "user" %>
-          </li>
-        </ul>
-      </div>
-    </div>
 
+  <div class="container col-6 w-50 formulario" style="max-height: 300px; margin-top: auto; margin-bottom: auto">
+    <div class="row w-100 justify-content-center">
+      <div class="col-xs-12 col-sm-10 col-md-8 ">
+        <div class='mt-5'>
+          <%= simple_form_for [@product, @order] do |f| %>
 
-  <div class='container'>
-      <div class="col-4 grid-product mb-3">
-        <%= image_tag "neymar.webp", alt: "stickers" %>
-        <div class="grid-detail">
-          <p><strong>Category: <%= @product.category %></strong></p>
-          <p><strong>Title: <%= @product.title %></strong></p>
-          <p><strong>Sticker: <%= @product.sticker %></strong></p>
-          <p><small><em>User: <%= @product.user.first_name  %> <%= @product.user.last_name  %></em></small></p>
+            <%= f.input :my_stickers_id, label: "Selecione sua Figurinha", collection: @current_user_product %>
+            <%= f.submit "Trocar", class:'btn btn-outline-dark' %>
+            <%= link_to 'Cancelar', products_path, class: 'btn btn-outline-dark' %>
+          <% end %>
         </div>
       </div>
     </div>
-
-  <div class='mt-5'>
-    <%= simple_form_for [@product, @order] do |f| %>
-
-      <%= f.input :my_stickers_id, label: "Selecione sua Figurinha", collection: @current_user_product %>
-      <%= f.submit "Trade", class:'btn btn-outline-dark' %>
-      <%= link_to 'Cancel', products_path, class: 'btn btn-outline-dark' %>
-    <% end %>
   </div>
 </div>
