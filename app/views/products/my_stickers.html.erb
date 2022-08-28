@@ -1,14 +1,14 @@
 <div class="container">
   <h2 class="h2-home">Minhas Figurinhas</h2>
   <div class="row" style="width: 60rem;" >
-      <p><%= link_to "Adicionar Sticker", new_product_path, class: 'btn btn-outline-dark' %></p>
+      <p><%= link_to "Adicionar Figurinha", new_product_path, class: 'btn btn-outline-dark' %></p>
     <% @products.each do |product| %>
       <div class="col-4 grid-product mb-3">
 
         <div class="card-sticker">
           <%= link_to product_path(product), class: "grid-detail" do %>
             <% if product.photo.present? %>
-              <%= cl_image_tag(product.photo.key, width: 400, height: 300, crop: :fill) %>
+              <%= cl_image_tag(product.photo.key, width: 400, height: 300, crop: :fit) %>
             <% else %>
               <%= image_tag "neymar.webp", alt: "stickers" %>
             <% end %>
@@ -22,7 +22,8 @@
               </div>
               <div class='buttons d-flex justify-content-around align-items-baseline'>
                 <%= link_to "Editar", edit_product_path(product), class: 'btn btn-outline-dark me-3'%>
-                <div class= 'btn btn-outline-dark'><%= link_to '', product_path(product), class: "fa-solid fa-trash-can", data: { turbo_method: :delete, turbo_confirm: "Você tem certeza que quer destruir esse sticker?" } %></div>
+                <div class= 'btn btn-outline-dark'><%= link_to '', product_path(product), class: "fa-solid fa-trash-can", data: { turbo_method: :delete, turbo_confirm: "Tem certeza que deseja deletar essa Figurinha?" } %></div>
+
               </div>
             </div>
           <% end %>
